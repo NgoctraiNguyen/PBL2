@@ -13,8 +13,7 @@ void Cell:: hinh_nv(int n){
 	setfillstyle(1,n);
 	bar(x,y,x+30,y+30);
 }
-void Cell:: hinh_vr(){
-	setcolor(6);
-	setfillstyle(1,12);
-	circle(x+10,y+10,10);
+void Cell:: hinh_vr(int color){
+	setcolor(color);
+	sector(x+15,y+15,0,360,15,15);
 }

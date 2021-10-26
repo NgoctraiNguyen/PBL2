@@ -5,9 +5,8 @@ int main(){
 	Luoi L;
 	L.background();
 	L.viewgame();
-	L.vevr(15,15);
-	L.vevr(20,20);
-	L.vevr(5,6);
+	L.khoitaoVR(5);
+	L.vevr();
 	char c,d;
 	L.vehinh(0);
 	while(true){

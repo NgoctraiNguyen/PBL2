@@ -1,6 +1,7 @@
 #include "Luoi.h"
 #include "winbgim.h"
 #include "Cell.h"
+#include "Virut.h"
 #include <fstream> 
 #include <iostream>
 using namespace std;
@@ -42,8 +43,30 @@ void Luoi:: viewgame(){
 	outtextxy(1205,100,temp);
 	F.close();
 }
-void Luoi:: vevr(int x,int y){
-	ds[x][y].hinh_vr();
+void Luoi:: khoitaoVR(int n){
+	SLvr = n;
+	vr = new Virut[n];
+	for(int i=0;i<n;i++){
+		vr[i].nhap();
+		//ds[vr[i].x][vr[i].y].hinh_vr(i);
+		delay((vr->x+vr->y)*100);
+	}
+}
+// void Luoi:: vevr(){
+// 	vr.khoitao(5);
+// 	int xx,yy;
+// 	Virut* ptrVR;
+// 	for (int i=0;i<5;i++){
+// 		vr.get(ptrVR,i);
+// 		xx = (*ptrVR).x;
+// 		yy = (*ptrVR).y;
+// 		ds[xx][yy].hinh_vr(5);
+// 	}
+// }
+void Luoi:: vevr(){
+	for(int i= 0; i<SLvr;i++){
+		ds[vr[i].x][vr[i].y].hinh_vr(i);
+	}
 }
 void Luoi:: vehinh(char c){
 	setwritemode(0);

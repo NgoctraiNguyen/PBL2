@@ -7,6 +7,6 @@ class Cell{
 		Cell();
 		void nhap(int xx,int yy);
 		void hinh_nv(int);
-		void hinh_vr();
+		void hinh_vr(int);
 };
 #endif
